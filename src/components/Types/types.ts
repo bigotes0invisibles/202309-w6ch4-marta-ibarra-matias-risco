@@ -1,4 +1,4 @@
-import type Character from "../Characters/Character";
+import type Character from "../Character/Character";
 
 export interface CharacterData {
   name: string;

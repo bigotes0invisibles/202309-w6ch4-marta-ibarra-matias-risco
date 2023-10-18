@@ -1,4 +1,4 @@
-import Character from "../Characters/Character";
+import Character from "../Character/Character";
 import { type KingData } from "../Types/types";
 
 class King extends Character {
