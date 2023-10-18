@@ -1,4 +1,4 @@
-import Character from "../Characters/Character";
+import Character from "../Character/Character";
 import { type AdvisorData } from "../Types/types";
 
 class Advisor extends Character {
