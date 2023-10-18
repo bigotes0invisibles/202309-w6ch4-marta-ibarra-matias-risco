@@ -1,17 +1,17 @@
 import Character from "../Characters/Character";
-import type CharacterData from "../Types/types";
+import { type FighterData } from "../Types/types";
 
 class Fighter extends Character {
   weapon: string;
   dexterity: number;
 
-  constructor(characterData: CharacterData, weapon: string, dexterity: number) {
-    super(characterData);
+  constructor(data: FighterData, weapon: string, dexterity: number) {
+    super(data);
     this.weapon = weapon;
     this.dexterity = this.filterDexterity(dexterity);
   }
 
-  communicate() {
+  communicate(): string {
     return `${super.communicate()}First I hit and then I ask`;
   }
 
