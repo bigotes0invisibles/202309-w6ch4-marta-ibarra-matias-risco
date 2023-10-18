@@ -1,6 +1,7 @@
 import King from "../King/King";
 import Fighter from "../Fighter/Fighter";
 import Advisor from "../Advisor/Advisor";
+import { Squire } from "../Squire/Squire";
 
 const joffreyCharacterData = {
   id: 1,
@@ -10,6 +11,7 @@ const joffreyCharacterData = {
   yearsOfReign: 2,
   imageSource: "joffrey.jpg",
 };
+const joffrey = new King(joffreyCharacterData, 2);
 
 const jaimeCharacterData = {
   id: 2,
@@ -20,6 +22,7 @@ const jaimeCharacterData = {
   dexterity: 7,
   imageSource: "jaime.jpg",
 };
+const jaime = new Fighter(jaimeCharacterData, "sword", 7);
 
 const daenerysCharacterData = {
   id: 3,
@@ -30,28 +33,28 @@ const daenerysCharacterData = {
   dexterity: 10,
   imageSource: "daenerys.jpg",
 };
+const daenerys = new Fighter(daenerysCharacterData, "Dragons", 10);
 
 const tyrionCharacterData = {
   id: 4,
   name: "Tyrion",
   family: "Lannister",
   age: 40,
-  advises: "daenerys",
+  advises: daenerys,
   imageSource: "tyrion.jpg",
 };
+const tyrion = new Advisor(tyrionCharacterData);
 
 const bronnCharacterData = {
   id: 5,
   name: "Bronn",
   family: "Blackwater",
   age: 54,
+  kissAssLevel: 0,
+  serves: jaime,
   imageSource: "bronn.jpg",
 };
 
-const joffrey = new King(joffreyCharacterData, 2);
-const jaime = new Fighter(jaimeCharacterData, "sword", 7);
-const daenerys = new Fighter(daenerysCharacterData, "Dragons", 10);
-const tyrion = new Advisor(tyrionCharacterData, daenerys);
-const bronn = new Squire(bronnCharacterData, 0, jaime);
+const bronn = new Squire(bronnCharacterData);
 
 export const characters = [jaime, joffrey, daenerys, tyrion, bronn];
