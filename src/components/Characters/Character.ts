@@ -1,5 +1,4 @@
-import type CharacterData from "../Types/types";
-
+import { type CharacterData } from "../Types/types";
 class Character {
   isAlive: boolean;
   series: string;
@@ -7,6 +6,7 @@ class Character {
 
   constructor(characterData: CharacterData) {
     this.characterData = characterData;
+    this.isAlive = true;
   }
 
   protected communicate() {
@@ -17,4 +17,5 @@ class Character {
     this.isAlive = false;
   }
 }
+
 export default Character;
