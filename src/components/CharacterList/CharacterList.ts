@@ -2,7 +2,7 @@ import CharacterCard from "../CharacterCard/CharacterCard";
 import Component from "../Component/Component";
 import { type CharacterData } from "../../types";
 
-abstract class CharacterList extends Component {
+class CharacterList extends Component {
   constructor(
     parentElement: Element,
     private readonly characters: CharacterData[],
