@@ -1,11 +1,11 @@
 import CharacterCard from "../CharacterCard/CharacterCard.js";
 import Component from "../Component/Component.js";
-import { type CharacterData } from "../../types";
+import type Character from "../Character/Character.js";
 
 class CharacterList extends Component {
   constructor(
     parentElement: Element,
-    private readonly characters: CharacterData[],
+    private readonly characters: Character[],
   ) {
     super(parentElement, "ul", "character-list");
   }
