@@ -11,6 +11,10 @@ class Fighter extends Character {
     this.dexterity = this.filterDexterity(dexterity);
   }
 
+  coso(): string {
+    return `Weapon:${this.weapon}`;
+  }
+
   communicate(): string {
     return `${super.communicate()}First I hit and then I ask`;
   }

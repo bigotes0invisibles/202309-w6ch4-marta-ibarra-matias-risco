@@ -14,6 +14,10 @@ class Advisor extends Character {
   communicate(): string {
     return `${super.communicate()}I have a funny feeling that I'm going to die`;
   }
+
+  coso(): string {
+    return `Advises to:`;
+  }
 }
 
 export default Advisor;

@@ -19,6 +19,10 @@ export class Squire extends Character {
     return `${super.communicate()}I'm a loser`;
   }
 
+  coso(): string {
+    return `Serves:`;
+  }
+
   kissAssLevelFilter(kissAssLevel: number): number {
     if (kissAssLevel < 0) {
       return 0;

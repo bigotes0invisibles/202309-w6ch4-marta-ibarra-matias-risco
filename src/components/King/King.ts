@@ -9,6 +9,10 @@ class King extends Character {
     this.yearsOfReign = yearsOfReign;
   }
 
+  coso(): string {
+    return `Years of Reign: ${this.yearsOfReign}`;
+  }
+
   protected communicate() {
     return `${this.characterData.name} says: `;
   }
