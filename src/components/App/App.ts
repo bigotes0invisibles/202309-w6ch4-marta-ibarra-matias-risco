@@ -14,7 +14,10 @@ class App extends Component {
 
     container.className = "container";
     this.element.appendChild(container);
-    const characterList = new CharacterList(container, characterData);
+    const characterList = new CharacterList(
+      container as HTMLElement,
+      characterData,
+    );
     characterList.render();
   }
 }
