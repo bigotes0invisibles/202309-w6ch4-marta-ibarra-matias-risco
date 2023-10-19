@@ -1,4 +1,4 @@
-import { characterData } from "../../data/data.js";
+import characterClass from "../CharacterFunctions.js";
 import CharacterList from "../CharacterList/CharacterList.js";
 import Component from "../Component/Component.js";
 class App extends Component {
@@ -16,7 +16,7 @@ class App extends Component {
     this.element.appendChild(container);
     const characterList = new CharacterList(
       container as HTMLElement,
-      characterData,
+      characterClass,
     );
     characterList.render();
   }
