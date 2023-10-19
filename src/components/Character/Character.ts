@@ -1,4 +1,4 @@
-import { type CharacterData } from "../Types/types.js";
+import { type CharacterData } from "../../types.js";
 class Character {
   isAlive: boolean;
   series: string;
