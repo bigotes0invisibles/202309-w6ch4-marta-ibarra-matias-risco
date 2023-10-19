@@ -10,7 +10,7 @@ class King extends Character {
   }
 
   protected communicate() {
-    return `${this.characterData.name} says: `;
+    return `${this.name} says: `;
   }
 
   protected die(): void {
