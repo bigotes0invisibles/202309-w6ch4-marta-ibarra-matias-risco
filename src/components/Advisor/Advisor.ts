@@ -14,6 +14,10 @@ class Advisor extends Character {
   communicate(): string {
     return `${super.communicate()}I have a funny feeling that I'm going to die`;
   }
+
+  cardInformation(): string {
+    return `Advises to:${this.advises?.name}`;
+  }
 }
 
 export default Advisor;
