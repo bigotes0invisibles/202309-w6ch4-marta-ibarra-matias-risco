@@ -1,3 +1,4 @@
+import { characterData } from "../data/data";
 import {
   type KingData,
   type CharacterData,
@@ -12,7 +13,7 @@ import King from "./King/King";
 import { Squire } from "./Squire/Squire";
 
 export const characterDatatoClass = (charactersData: CharacterData[]) =>
-  charactersData.map((characterData): Character | undefined => {
+  charactersData.map((characterData): Character => {
     switch (characterData.characterType) {
       case "King":
         return new King(
@@ -30,8 +31,11 @@ export const characterDatatoClass = (charactersData: CharacterData[]) =>
         return new Advisor(characterData as AdvisorData);
 
       case "Squire":
-        return new Squire(characterData as SquireData);
       default:
-        return undefined;
+        return new Squire(characterData as SquireData);
     }
   });
+
+const characterClass = characterDatatoClass(characterData);
+
+export default characterClass;
