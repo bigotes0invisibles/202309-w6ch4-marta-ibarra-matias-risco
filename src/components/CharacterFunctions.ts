@@ -1,4 +1,4 @@
-import { characterData } from "../data/data";
+import { characterData } from "../data/data.js";
 import {
   type KingData,
   type CharacterData,
@@ -6,11 +6,11 @@ import {
   type AdvisorData,
   type SquireData,
 } from "../types";
-import Advisor from "./Advisor/Advisor";
+import Advisor from "./Advisor/Advisor.js";
 import type Character from "./Character/Character";
-import Fighter from "./Fighter/Fighter";
-import King from "./King/King";
-import { Squire } from "./Squire/Squire";
+import Fighter from "./Fighter/Fighter.js";
+import King from "./King/King.js";
+import { Squire } from "./Squire/Squire.js";
 
 export const characterDatatoClass = (charactersData: CharacterData[]) =>
   charactersData.map((characterData): Character => {
