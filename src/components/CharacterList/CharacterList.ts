@@ -7,13 +7,13 @@ class CharacterList extends Component {
     parentElement: Element,
     private readonly characters: Character[],
   ) {
-    super(parentElement, "ul", "character-list");
+    super(parentElement, "ul", "characters-list row list-unstyled");
   }
 
   populate(): void {
     this.characters.forEach((character) => {
       const item = document.createElement("li");
-      item.className = "character-list";
+      item.className = "col";
       this.element.appendChild(item);
 
       const newItem = new CharacterCard(item, character);
