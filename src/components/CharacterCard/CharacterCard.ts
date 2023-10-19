@@ -10,13 +10,12 @@ class CharacterCard extends Component {
     className: string,
     data: CharacterData,
   ) {
-    super(parentElement, tagName, className);
+    super(parentElement, "article", "character");
     this.charaterData = data;
-  }
+    }
 
   populate(): void {
-    this.element.innerHTML = `
-      <article class="character">
+    this.element.innerHTML = `      
           <div class="card character__card">
             <img src="${this.charaterData.imageSource}" alt="Character's Name and family" class="character__picture card-img-top" />
             <div class="card-body">
@@ -32,11 +31,7 @@ class CharacterCard extends Component {
               </div>
             </div>
           </div>
-        </article>
-      </li>
-      <li class="col">
-        <article class="character">
-    `;
+            `;
   }
 }
 
