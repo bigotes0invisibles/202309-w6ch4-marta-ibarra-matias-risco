@@ -4,15 +4,10 @@ import { type CharacterData } from "../Types/types.js";
 class CharacterCard extends Component {
   charaterData;
 
-  constructor(
-    parentElement: Element,
-    tagName: string,
-    className: string,
-    data: CharacterData,
-  ) {
+  constructor(parentElement: Element, data: CharacterData) {
     super(parentElement, "article", "character");
     this.charaterData = data;
-    }
+  }
 
   populate(): void {
     this.element.innerHTML = `      
