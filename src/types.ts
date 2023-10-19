@@ -1,18 +1,16 @@
-import type Character from "../Character/Character.js";
-import type Fighter from "../Fighter/Fighter.js";
-
 export interface CharacterData {
   name: string;
   family: string;
   age: number;
   imageSource: string;
+  characterType: "Fighter" | "King" | "Advisor" | "Squire";
 }
 
 export interface KingData extends CharacterData {
   yearsOfReign: number;
 }
 export interface AdvisorData extends CharacterData {
-  advises: Character;
+  advises: CharacterData;
 }
 
 export interface FighterData extends CharacterData {
@@ -22,5 +20,5 @@ export interface FighterData extends CharacterData {
 
 export interface SquireData extends CharacterData {
   kissAssLevel: number;
-  serves: Fighter;
+  serves: FighterData;
 }

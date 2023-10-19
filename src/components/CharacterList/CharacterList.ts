@@ -1,6 +1,6 @@
 import CharacterCard from "../CharacterCard/CharacterCard";
 import Component from "../Component/Component";
-import { type CharacterData } from "../Types/types";
+import { type CharacterData } from "../../types";
 
 abstract class CharacterList extends Component {
   constructor(
