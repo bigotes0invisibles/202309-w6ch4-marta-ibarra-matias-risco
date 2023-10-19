@@ -15,8 +15,8 @@ class Advisor extends Character {
     return `${super.communicate()}I have a funny feeling that I'm going to die`;
   }
 
-  coso(): string {
-    return `Advises to:`;
+  cardInformation(): string {
+    return `Advises to:${this.advises?.name}`;
   }
 }
 

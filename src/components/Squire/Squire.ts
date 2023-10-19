@@ -19,8 +19,8 @@ export class Squire extends Character {
     return `${super.communicate()}I'm a loser`;
   }
 
-  coso(): string {
-    return `Serves:`;
+  cardInformation(): string {
+    return `Serves: ${this.serves?.name}`;
   }
 
   kissAssLevelFilter(kissAssLevel: number): number {

@@ -9,7 +9,7 @@ class King extends Character {
     this.yearsOfReign = yearsOfReign;
   }
 
-  coso(): string {
+  cardInformation(): string {
     return `Years of Reign: ${this.yearsOfReign}`;
   }
 

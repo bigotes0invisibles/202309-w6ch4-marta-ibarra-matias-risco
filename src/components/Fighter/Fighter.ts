@@ -11,7 +11,7 @@ class Fighter extends Character {
     this.dexterity = this.filterDexterity(dexterity);
   }
 
-  coso(): string {
+  cardInformation(): string {
     return `Weapon:${this.weapon}`;
   }
 
