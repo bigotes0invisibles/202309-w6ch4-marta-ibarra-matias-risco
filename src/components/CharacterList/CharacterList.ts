@@ -1,13 +1,11 @@
-import App from "../App/App";
-import Character from "../Character/Character";
 import CharacterCard from "../CharacterCard/CharacterCard";
 import Component from "../Component/Component";
-import { CharacterData } from "../Types/types";
+import { type CharacterData } from "../Types/types";
 
 abstract class CharacterList extends Component {
   constructor(
     parentElement: Element,
-    private characters: CharacterData[],
+    private readonly characters: CharacterData[],
   ) {
     super(parentElement, "ul", "character-list");
   }
@@ -19,6 +17,7 @@ abstract class CharacterList extends Component {
       this.element.appendChild(item);
 
       const newItem = new CharacterCard(item, character as CharacterData);
+      newItem.render();
     });
   }
 }
