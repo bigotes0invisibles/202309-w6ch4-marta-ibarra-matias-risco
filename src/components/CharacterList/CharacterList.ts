@@ -16,7 +16,7 @@ abstract class CharacterList extends Component {
       item.className = "character-list";
       this.element.appendChild(item);
 
-      const newItem = new CharacterCard(item, character as CharacterData);
+      const newItem = new CharacterCard(item, character);
       newItem.render();
     });
   }
