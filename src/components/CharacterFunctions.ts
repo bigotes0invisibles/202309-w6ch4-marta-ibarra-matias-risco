@@ -16,17 +16,10 @@ export const characterDatatoClass = (charactersData: CharacterData[]) =>
   charactersData.map((characterData): Character => {
     switch (characterData.characterType) {
       case "King":
-        return new King(
-          characterData as KingData,
-          (characterData as KingData).yearsOfReign,
-        );
+        return new King(characterData as KingData);
 
       case "Fighter":
-        return new Fighter(
-          characterData as FighterData,
-          (characterData as FighterData).weapon,
-          (characterData as FighterData).dexterity,
-        );
+        return new Fighter(characterData as FighterData);
       case "Advisor":
         return new Advisor(characterData as AdvisorData);
 
