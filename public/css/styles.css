@@ -26,6 +26,10 @@ body {
   height: 200px;
 }
 
+.character__picture--upside-down {
+  border-radius: 2px solid red;
+}
+
 .character__card {
   position: relative;
   border: none;

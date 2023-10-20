@@ -47,7 +47,7 @@ const tyrionCharacterData: AdvisorData = {
   name: "Tyrion",
   family: "Lannister",
   age: 40,
-  advises: daenerysCharacterData,
+  advises: daenerysCharacterData.name,
   imageSource: "tyrion.jpg",
   characterType: "Advisor",
 };
@@ -59,7 +59,7 @@ const bronnCharacterData: SquireData = {
   family: "Blackwater",
   age: 54,
   kissAssLevel: 0,
-  serves: jaimeCharacterData,
+  serves: jaimeCharacterData.name,
   imageSource: "bronn.jpg",
   characterType: "Squire",
 };

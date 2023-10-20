@@ -6,9 +6,7 @@ class Advisor extends Character {
 
   constructor(data: AdvisorData) {
     super(data);
-    if (data.advises instanceof Character) {
-      this.advises = data.advises;
-    }
+    this.advises = data.advises;
   }
 
   communicate(): string {
@@ -16,7 +14,7 @@ class Advisor extends Character {
   }
 
   cardInformation(): string {
-    return `Advises to:${this.advises?.name}`;
+    return `Advises to:${this.advises}`;
   }
 }
 
