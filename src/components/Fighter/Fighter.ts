@@ -5,10 +5,10 @@ class Fighter extends Character {
   weapon: string;
   dexterity: number;
 
-  constructor(data: FighterData, weapon: string, dexterity: number) {
+  constructor(data: FighterData) {
     super(data);
-    this.weapon = weapon;
-    this.dexterity = this.filterDexterity(dexterity);
+    this.weapon = data.weapon;
+    this.dexterity = this.filterDexterity(data.dexterity);
   }
 
   cardInformation(): string {

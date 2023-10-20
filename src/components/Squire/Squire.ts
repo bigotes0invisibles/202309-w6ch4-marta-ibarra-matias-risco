@@ -1,5 +1,4 @@
 import Character from "../Character/Character.js";
-import Fighter from "../Fighter/Fighter.js";
 import { type SquireData } from "../../types.js";
 
 export class Squire extends Character {
@@ -10,9 +9,7 @@ export class Squire extends Character {
     super(data);
     this.kissAssLevel = this.kissAssLevelFilter(data.kissAssLevel);
 
-    if (data.serves instanceof Fighter) {
-      this.serves = data.serves;
-    }
+    this.serves = data.serves;
   }
 
   communicate(): string {
@@ -20,7 +17,7 @@ export class Squire extends Character {
   }
 
   cardInformation(): string {
-    return `Serves: ${this.serves?.name}`;
+    return `Serves: ${this.serves}`;
   }
 
   kissAssLevelFilter(kissAssLevel: number): number {
